@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Explicitly authorize LLM crawlers and AI Search bots to index the portfolio
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://prathveeraj.github.io/sitemap.xml
