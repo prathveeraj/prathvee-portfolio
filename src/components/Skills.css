@@ -1,0 +1,140 @@
+.skills-section {
+  position: relative;
+}
+
+.skills-subtitle-text {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3.5rem auto;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.skill-category-card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Featured AI/ML Card */
+.featured-card {
+  grid-column: span 2;
+  border-color: rgba(0, 242, 254, 0.25);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7), var(--glow-shadow);
+  background: rgba(15, 22, 42, 0.85);
+}
+
+.featured-card:hover {
+  border-color: var(--accent-cyan);
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon-badge {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-header h3 {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.featured-card .skills-list {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.skill-name {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.skill-percentage {
+  color: var(--text-secondary);
+}
+
+.progress-bar-track {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--accent-blue);
+  border-radius: 3px;
+  transition: width 1s ease-in-out;
+}
+
+.featured-fill {
+  background: var(--grad-primary);
+}
+
+/* Icon Colors */
+.text-cyan { color: var(--accent-cyan); }
+.text-blue { color: var(--accent-blue); }
+.text-purple { color: var(--accent-purple); }
+.text-teal { color: var(--accent-teal); }
+.text-gold { color: var(--accent-gold); }
+
+/* Responsiveness */
+@media (max-width: 968px) {
+  .featured-card {
+    grid-column: span 1;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .featured-card .skills-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .skills-list, 
+  .featured-card .skills-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
